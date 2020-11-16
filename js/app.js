@@ -9,17 +9,13 @@ const feedback =  document.querySelector('.feedback');
 //BUTTONS
 const addBtn =  document.querySelector('#add-btn');
 const clearBtn =  document.querySelector('#clear-list');
-// const editBtn =  document.querySelector('.edit-item');
-// const completeBtn =  document.querySelector('.complete-item');
-// const deleteBtn =  document.querySelector('.delete-item');
+
 
 addBtn.addEventListener('click', function(e){
-    // console.log(itemInput.value)
     e.preventDefault();
     let val = itemInput.value;
-    // console.log(val)
     if(val == ""){
-        //show alert message 
+        //show alert message
         feedback.innerHTML = 'Please Enter Valid Value';
         feedback.classList.add('showItem', 'alert-danger');
     }else{
@@ -45,6 +41,7 @@ addBtn.addEventListener('click', function(e){
 
         // console.log(itemIcons);
 
+        //wire up the buttons!
         itemIcons.addEventListener('click', function(e){
             let index = e.target.classList;
             let target =  e.currentTarget;
